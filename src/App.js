@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, BrowserRouter as Router, useLocation } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './views/Home';
+import About from './views/About';
+// import Projects from './views/Projects';
+// import Contact from './views/Contact';
+import styled from 'styled-components';
+
+const AppContainer = styled.div`
+  background-color: ${props => props.theme.lightBlack};
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const AppHeader = styled.header`
+  width: 100%;
+`;
+
+function AppContent() {
+  const location = useLocation();
+
+  return (
+    <AppContainer>
+      <AppHeader>
+      {location.pathname !== "/" && <Header />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </AppHeader>
+    </AppContainer>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 
