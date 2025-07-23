@@ -2,21 +2,24 @@ import { Routes, Route, BrowserRouter as Router, useLocation } from 'react-route
 import Header from './components/Header';
 import Home from './views/Home';
 import About from './views/About';
-// import Projects from './views/Projects';
-// import Contact from './views/Contact';
+import Contact from './views/Contact';
+import Projects from './views/Projects';
 import styled from 'styled-components';
 
 const AppContainer = styled.div`
-  background-color: ${props => props.theme.lightBlack};
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: ${({ theme }) => theme.lightBlack};
+`;
+
+const MainContent = styled.main`
+  flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
-
-const AppHeader = styled.header`
-  width: 100%;
 `;
 
 function AppContent() {
@@ -24,13 +27,15 @@ function AppContent() {
 
   return (
     <AppContainer>
-      <AppHeader>
       {location.pathname !== "/" && <Header />}
+      <MainContent>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
-      </AppHeader>
+      </MainContent>
     </AppContainer>
   );
 }

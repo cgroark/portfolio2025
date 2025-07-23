@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import fernBg from '../assets/fern.jpeg';
-import { GithubLogoIcon } from "@phosphor-icons/react";
-import { LinkedinLogoIcon } from "@phosphor-icons/react";
+import { GithubLogoIcon, LinkedinLogoIcon } from "@phosphor-icons/react";
 import HomeNavbar from '../components/HomeNavbar';
 
 const HomeContainer = styled.div`
-    color: ${props => props.theme.white};
     background-image: url(${fernBg});
     background-size: cover;
     background-position: 50%;
@@ -15,9 +13,9 @@ const HomeContainer = styled.div`
 `;
 
 const HomeCard = styled.div`
-    background-color: ${props => props.theme.lightBlack30};
+    background-color: ${props => props.theme.lightBlack60};
     padding: 20px;
-    border: 3px solid ${props => props.theme.white};
+    border-radius: 10px;
     max-width: 460px;
     margin: 20% auto 0;
     text-align: center;

@@ -1,25 +1,35 @@
 import { Link } from "react-router-dom";
+import { CodeIcon, HeadCircuitIcon, MailboxIcon, WarehouseIcon } from "@phosphor-icons/react";
+
 import styled from "styled-components";
 
 const Nav = styled.nav`
   display: flex;
   justify-content: end;
-  background-color: ${props => props.theme.lightBlack};
 `;
 
 const NavList = styled.ul`
-  background-color: ${props => props.theme.lightBlack};
   list-style: none;
 `;
 
 const NavItem = styled.li`
   display: inline-block;
-  padding-left: 10px;
+  padding-left: 25px;
 `;
 
 const NavLink = styled(Link)`
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.offWhite};
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s ease;
+  padding-bottom: 3px;
+
+  &:hover {
+    border-bottom: 3px solid ${props => props.theme.purple};
+  }
 `;
 
 function Navbar() {
@@ -27,16 +37,28 @@ function Navbar() {
         <Nav>
           <NavList>
             <NavItem>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">
+                <WarehouseIcon size={24} />
+                Home
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about">
+                <HeadCircuitIcon size={24} />
+                About
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/recent-work">Recent Work</NavLink>
+              <NavLink to="/projects">
+                <CodeIcon size={24} />
+                Projects
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/contact">
+                <MailboxIcon size={24} />
+                Contact
+              </NavLink>
             </NavItem>
           </NavList>
         </Nav>
