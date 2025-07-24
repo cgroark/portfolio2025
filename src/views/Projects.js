@@ -1,5 +1,5 @@
 import {
-  ArrowBendUpRightIcon, ArrowBendRightDownIcon,
+  ArrowBendUpLeftIcon, ArrowBendRightDownIcon,
   ArrowSquareOutIcon, GithubLogoIcon,
   CodeIcon, CodeBlockIcon, BookOpenTextIcon,
   AngularLogoIcon, PersonSimpleRunIcon,
@@ -9,6 +9,7 @@ import {
 import styled from 'styled-components';
 import bookends from '../assets/bookEnds.png';
 import participate from '../assets/po-site.png';
+import ctDashboard from '../assets/CTdashboard.png';
 import PaceHeader from '../components/PaceHeader';
 
 
@@ -195,6 +196,38 @@ function Projects() {
       </ProjectWrapper>
       <LineBreak />
       <ProjectWrapper>
+      <Card>
+          <h2 style={{ marginTop: '10px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              ColdTrace Dashboard, Nexleaf Analytics
+            </div>
+          </h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <AngularLogoIcon size={32} />
+            <p>
+              Angular Frontend, Python/Django Backend
+            </p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <StorefrontIcon size={32} />
+            <p>
+              Built as key contributor to the Nexleaf Analytics engineering team. Tracking real-time data from remote temperature sensors, monitoring vaccine temperatures around the globe. Iterating quickly in line with Product and Design teams, and repsonding quickly to user needs and client feedback. Consitently updating UI, expanding test coverage, supporting devleopment of AI chatbot, and broadening use of data visualization.
+            </p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <CodeBlockIcon size={32} />
+            <p>
+              Angular, TypeScript, RxJS, amCharts (data visualization), HTML, SCSS, Bootstrap, Material UI, RESTful API, Python, Django, MongoDB
+            </p>
+          </div>
+        </Card>
+        <ProjectImage borderColor="teal" src={ctDashboard} alt="ColdTrace Dashboard" />
+      </ProjectWrapper>
+      <LineBreak />
+      <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
+        <PaceSection>
+          <PaceHeader />
+        </PaceSection>
         <Card>
           <h2 style={{ marginTop: '10px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -224,8 +257,8 @@ function Projects() {
           </div>
             <ArrowUp>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <ArrowBendUpLeftIcon size={32} />
                 Test it out!
-                <ArrowBendUpRightIcon size={32} />
               </div>
             </ArrowUp>
           <ExternalButton
@@ -245,15 +278,9 @@ function Projects() {
               </div>
             </ArrowDown>
         </Card>
-        <PaceSection>
-          <PaceHeader />
-        </PaceSection>
       </ProjectWrapper>
       <LineBreak />
-      <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
-        <a href="https://participate.online/" target="_blank" rel="noopener noreferrer">
-          <ProjectImage borderColor="yellow" src={participate} alt="Participate Online" />
-        </a>
+      <ProjectWrapper>
         <Card>
           <h2 style={{ marginTop: '10px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -289,6 +316,9 @@ function Projects() {
             </div>
           </ExternalButton>
         </Card>
+        <a href="https://participate.online/" target="_blank" rel="noopener noreferrer">
+          <ProjectImage borderColor="yellow" src={participate} alt="Participate Online" />
+        </a>
       </ProjectWrapper>
 
     </ProjectsContainer>

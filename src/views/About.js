@@ -77,7 +77,7 @@ function About() {
                 <h2 style={{ margin: '0 0 10px 0' }}>
                   Colin Groark
                 </h2>
-                <p style={{ margin: '0' }}>Full stack engineer with a frontend focus and leadership experience who contributes across the stack to build scalable, responsive, accessible, and high-quality UI and software platforms in close collaboration with product and design teams.</p>
+                <p style={{ margin: '0' }}>Full stack engineer with a frontend focus and leadership experience who contributes across the stack to build scalable, responsive, accessible, and high-quality UI, data visualizations, and software platforms in close collaboration with product and design teams.</p>
               </ProfileText>
             </Card>
           </ProfileContainer>
