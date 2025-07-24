@@ -4,15 +4,26 @@ import { Link } from "react-router-dom";
 import Navbar from './Navbar';
 
 const HeaderContainer = styled.div`
-    color: ${props => props.theme.offWhite};
-    background-image: url(${fernBg});
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+  color: ${props => props.theme.offWhite};
+  background-image: url(${fernBg});
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    display: block;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 576px) {
+    h1 {
+      text-align: center;
+    }
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -31,14 +42,14 @@ const NavLink = styled(Link)`
 `;
 
 function Header() {
-    return (
-        <HeaderContainer>
-            <NavLink to="/">
-                <h1 style={{ margin: 0 }}>Colin Groark</h1>
-            </NavLink>
-            <Navbar />
-        </HeaderContainer>
-    )
+  return (
+    <HeaderContainer>
+      <NavLink to="/">
+          <h1 style={{ margin: 0 }}>Colin Groark</h1>
+      </NavLink>
+      <Navbar />
+    </HeaderContainer>
+  )
 }
 
 export default Header;

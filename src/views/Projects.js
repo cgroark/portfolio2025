@@ -2,10 +2,13 @@ import {
   ArrowBendUpRightIcon, ArrowBendRightDownIcon,
   ArrowSquareOutIcon, GithubLogoIcon,
   CodeIcon, CodeBlockIcon, BookOpenTextIcon,
-  AngularLogoIcon, PersonSimpleRunIcon
+  AngularLogoIcon, PersonSimpleRunIcon,
+  SubtractSquareIcon,
+  StorefrontIcon
 } from '@phosphor-icons/react';
 import styled from 'styled-components';
 import bookends from '../assets/bookEnds.png';
+import participate from '../assets/po-site.png';
 import PaceHeader from '../components/PaceHeader';
 
 
@@ -31,12 +34,24 @@ const Card = styled.div`
   &:hover {
     transform: translateY(-10px);
   }
+
+  svg {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
 `;
 
 const ProjectImage = styled.img`
   width: 300px;
   border-radius: 20px;
-  border: solid 3px ${props => props.theme.offWhite};
+  border: solid 3px;
+  border-color: ${({ borderColor, theme }) => theme[borderColor] || theme.offWhite};
   transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
   @media (max-width: 768px) {
@@ -105,6 +120,11 @@ const ArrowDown = styled.div`
   }
 `;
 
+const LineBreak = styled.hr`
+  margin: 40px 0;
+  border: 1px solid ${props => props.theme.yellow};
+`;
+
 function Projects() {
   return (
     <ProjectsContainer>
@@ -125,13 +145,13 @@ function Projects() {
             </div>
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <AngularLogoIcon size={24} />
+            <AngularLogoIcon size={32} />
             <p>
               Fullstack Angular CRUD web application
             </p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <BookOpenTextIcon size={24} />
+            <BookOpenTextIcon size={32} />
             <p>
               Track the books you're reading, find new books, see your friends' reading lists.
             </p>
@@ -149,13 +169,13 @@ function Projects() {
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               Visit Project Site
-              <ArrowSquareOutIcon size={24} />
+              <ArrowSquareOutIcon size={32} />
             </div>
           </ExternalButton>
         </Card>
       </div>
-      <hr style={{ margin: '40px 0' }} />
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
+      <LineBreak />
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'space-between', width: '100%' }}>
         <Card>
           <h2 style={{ marginTop: '10px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -166,13 +186,13 @@ function Projects() {
             </div>
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <CodeIcon size={24} />
+            <CodeIcon size={32} />
             <p>
               React web application
             </p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <PersonSimpleRunIcon size={24} />
+            <PersonSimpleRunIcon size={32} />
             <p>
               Get a race pace for your next event, or a goal time based on pace.
             </p>
@@ -186,7 +206,7 @@ function Projects() {
             <ArrowUp>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 Test it out!
-                <ArrowBendUpRightIcon size={24} />
+                <ArrowBendUpRightIcon size={32} />
               </div>
             </ArrowUp>
           <ExternalButton
@@ -196,13 +216,13 @@ function Projects() {
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               Visit Project Site
-              <ArrowSquareOutIcon size={24} />
+              <ArrowSquareOutIcon size={32} />
             </div>
           </ExternalButton>
           <ArrowDown>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 Test it out!
-                <ArrowBendRightDownIcon size={24} />
+                <ArrowBendRightDownIcon size={32} />
               </div>
             </ArrowDown>
         </Card>
@@ -210,6 +230,48 @@ function Projects() {
           <PaceHeader />
         </PaceSection>
       </div>
+      <LineBreak />
+      <div style={{ display: 'flex', flexWrap: 'wrap-reverse', gap: '20px', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+        <a href="https://participate.online/" target="_blank" rel="noopener noreferrer">
+          <ProjectImage borderColor="yellow" src={participate} alt="Participate Online" />
+        </a>
+        <Card>
+          <h2 style={{ marginTop: '10px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              participate.online Splash Page
+            </div>
+          </h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <SubtractSquareIcon size={32} />
+            <p>
+              WordPress Custom Theme
+            </p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <StorefrontIcon size={32} />
+            <p>
+            Built for EnviroIssues to highlight design and feature updates to participate.online websites built to communicate updates on public infrastrucutre projects in the Pacific Northwest.
+            </p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <CodeBlockIcon size={32} />
+            <p>
+              WordPress (CMS), PHP, HTML, CSS, JavaScript, JQuery
+            </p>
+          </div>
+          <ExternalButton
+            href="https://participate.online/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              Visit Project Site
+              <ArrowSquareOutIcon size={32} />
+            </div>
+          </ExternalButton>
+        </Card>
+      </div>
+
     </ProjectsContainer>
   );
 }
