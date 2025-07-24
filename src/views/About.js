@@ -130,7 +130,7 @@ function About() {
                 </blockquote>
               </p>
               <p>
-                "<em>Colin stands out amongst his colleagues at being incredibly detail oriented and communicative about what he's tackling and how he's approaching it...He's also consistently among the most consistent at delivering on his commitments.</em>" <br />
+                "<em>Colin stands out amongst his colleagues at being incredibly detail oriented and communicative about what he's tackling and how he's approaching it...He's also remarkably consistent in delivering on his commitments.</em>" <br />
                 <blockquote>
                   <strong> - Lucas Howell, engineering manager (Nexleaf Analytics)</strong>
                 </blockquote>
