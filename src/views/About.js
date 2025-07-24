@@ -4,7 +4,7 @@ import groark from '../assets/groark.jpeg';
 const AboutContainer = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
 `;
 
 const ProfileContainer = styled.div`
@@ -67,7 +67,7 @@ const Card = styled.div`
 function About() {
     return (
         <AboutContainer>
-          <h1 style={{ marginBottom: '20px', textAlign: 'right', display: 'block' }}>
+          <h1 style={{ marginBottom: '20px', textAlign: 'right', display: 'block', fontWeight: '300' }}>
             About Me
           </h1>
           <ProfileContainer >
@@ -83,7 +83,7 @@ function About() {
           </ProfileContainer>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'space-between' }}>
             <Card borderColor="pink">
-              <h3 style={{ marginTop: '10px' }}>Fullstack Development</h3>
+              <h3 style={{ marginTop: '10px' }}>Full Stack Development</h3>
               <p>
                 React, Angular, TypeScript, JavaScript, ES6, RxJS, JQuery, CSS, SCSS, HTML, Data Visualization (Chart.js, Recharts, amCharts)
               </p>

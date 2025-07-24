@@ -15,7 +15,26 @@ import PaceHeader from '../components/PaceHeader';
 const ProjectsContainer = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
+
+  @media (max-width: 940px) {
+    h1 {
+      text-align: center !important;
+      margin-bottom: 50px !important;
+    }
+  }
+`;
+
+const ProjectWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 940px) {
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`
@@ -56,6 +75,7 @@ const ProjectImage = styled.img`
 
   @media (max-width: 768px) {
     width: 100%;
+    max-width: 360px;
   }
 
   &:hover {
@@ -80,8 +100,6 @@ const ExternalButton = styled.a`
   }
 `;
 
-
-
 const PaceSection = styled.div`
   border-radius: 20px;
   border: solid 3px ${props => props.theme.offWhite};
@@ -91,6 +109,7 @@ const PaceSection = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
+    max-width: 360px;
   }
 
   &:hover {
@@ -128,10 +147,10 @@ const LineBreak = styled.hr`
 function Projects() {
   return (
     <ProjectsContainer>
-      <h1 style={{ marginBottom: '20px', textAlign: 'right', display: 'block' }}>
+      <h1 style={{ marginBottom: '20px', textAlign: 'right', display: 'block', fontWeight: '300' }}>
         Projects
       </h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap-reverse', gap: '20px', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+      <ProjectWrapper>
         <a href="https://bookends.design" target="_blank" rel="noopener noreferrer">
           <ProjectImage src={bookends} alt="Book Ends" />
         </a>
@@ -173,9 +192,9 @@ function Projects() {
             </div>
           </ExternalButton>
         </Card>
-      </div>
+      </ProjectWrapper>
       <LineBreak />
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'space-between', width: '100%' }}>
+      <ProjectWrapper>
         <Card>
           <h2 style={{ marginTop: '10px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -229,9 +248,9 @@ function Projects() {
         <PaceSection>
           <PaceHeader />
         </PaceSection>
-      </div>
+      </ProjectWrapper>
       <LineBreak />
-      <div style={{ display: 'flex', flexWrap: 'wrap-reverse', gap: '20px', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+      <ProjectWrapper>
         <a href="https://participate.online/" target="_blank" rel="noopener noreferrer">
           <ProjectImage borderColor="yellow" src={participate} alt="Participate Online" />
         </a>
@@ -270,7 +289,7 @@ function Projects() {
             </div>
           </ExternalButton>
         </Card>
-      </div>
+      </ProjectWrapper>
 
     </ProjectsContainer>
   );

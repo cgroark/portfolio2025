@@ -41,6 +41,16 @@ const HomeSubtitle = styled.h2`
     margin-bottom: 5px;
 `;
 
+const ExternalLink = styled.a`
+  color: ${props => props.theme.offWhite};
+  text-decoration: none;
+  transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
 function Home() {
     return (
         <HomeContainer>
@@ -49,8 +59,12 @@ function Home() {
             <HomeSubtitle>Software Engineer</HomeSubtitle>
             <HomeNavbar />
             <div style={{ display: 'flex', justifyContent: 'center', gap: '50px', margin: '40px 0' }}>
+              <ExternalLink href="https://github.com/cgroark" target="_blank" rel="noopener noreferrer">
                 <GithubLogoIcon size={36} />
+              </ExternalLink>
+              <ExternalLink href="https://www.linkedin.com/in/colin-groark/" target="_blank" rel="noopener noreferrer">
                 <LinkedinLogoIcon size={36} />
+              </ExternalLink>
             </div>
           </HomeCard>
         </HomeContainer>

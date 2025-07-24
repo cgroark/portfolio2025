@@ -14,15 +14,20 @@ const HeaderContainer = styled.div`
   align-items: center;
   padding: 20px;
 
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 48px;
+    margin: 0;
+
+    @media (max-width: 576px) {
+      text-align: center;
+    }
+  }
+
   @media (max-width: 768px) {
     display: block;
     padding-bottom: 0;
-  }
-
-  @media (max-width: 576px) {
-    h1 {
-      text-align: center;
-    }
   }
 `;
 
@@ -33,7 +38,7 @@ const NavLink = styled(Link)`
   border: solid 2px transparent;
   padding: 10px 14px;
   border-radius: 10px;
-  transition: background-color 0.3s ease, border 0.5s ease;
+  transition: background-color 0.3s ease, border 0.3s ease;
 
   &:hover {
     background-color: ${props => props.theme.purple};
@@ -45,7 +50,7 @@ function Header() {
   return (
     <HeaderContainer>
       <NavLink to="/">
-          <h1 style={{ margin: 0 }}>Colin Groark</h1>
+          <h1>Colin Groark</h1>
       </NavLink>
       <Navbar />
     </HeaderContainer>
