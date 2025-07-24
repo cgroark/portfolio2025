@@ -311,7 +311,7 @@ function Projects() {
             rel="noopener noreferrer"
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              Visit Project Site
+              Visit Website
               <ArrowSquareOutIcon size={32} />
             </div>
           </ExternalButton>

@@ -103,22 +103,22 @@ function About() {
             <Card borderColor="teal">
               <h3 style={{ marginTop: '10px' }}>Recent Experience</h3>
               <p>
-                Lead development of complex frontend features from inception to launch
+                Lead development of complex frontend features from inception to launch.
               </p>
               <p>
-                Partner with Product to iterate on UX, resolve ambiguity, and deliver polished, high-impact, responsive UI in line with Figma designs
+                Partner with Product to iterate on UX, resolve ambiguity, and deliver polished, high-impact, responsive UI in line with Figma designs.
               </p>
               <p>
-                Team lead for new features: flagging decision points, guiding architecture, reviewing and delivering code, and aligning implementation to ensure compatibility and maintainability of new features
+                Team lead for new features: flagging decision points, guiding architecture, reviewing and delivering code, and aligning implementation to ensure compatibility and maintainability of new features.
               </p>
               <p>
-                Embrace iteration and feedback loops, quickly adapting frontend work to shifting requirements or design constraints
+                Embrace iteration and feedback loops, quickly adapting frontend work to shifting requirements or design constraints.
               </p>
             </Card>
             <Card borderColor="purple" marginTop="-106px">
               <h3 style={{ marginTop: '10px' }}>What Others Say</h3>
               <p>
-                "<em>Colin's blend of technical excellence, rapid problem-solving, and collaborative spirit has been instrumental in delivering a wide variety of new features on time and with high quality.</em>" <br />
+                "<em>Colin's blend of technical excellence, rapid problem-solving, and collaborative spirit has been instrumental in delivering a wide variety of new features on time and with high quality...He's also remarkably consistent in delivering on his commitments.</em>" <br />
                 <blockquote>
                   <strong> - Lucas Howell, engineering manager (Nexleaf Analytics)</strong>
                 </blockquote>
@@ -127,12 +127,6 @@ function About() {
                 "<em>I could not recommend Colin more highly. He is one of my favorite people to have ever worked with. His combination of technical talent and understanding of the important work we do is nearly impossible to replicate. When hiring devs, I've found the latter to be incredibly hard to find.</em>" <br />
                 <blockquote>
                   <strong> - Ray Outlaw, former manager (EnviroIssues)</strong>
-                </blockquote>
-              </p>
-              <p>
-                "<em>Colin stands out amongst his colleagues at being incredibly detail oriented and communicative about what he's tackling and how he's approaching it...He's also remarkably consistent in delivering on his commitments.</em>" <br />
-                <blockquote>
-                  <strong> - Lucas Howell, engineering manager (Nexleaf Analytics)</strong>
                 </blockquote>
               </p>
             </Card>
