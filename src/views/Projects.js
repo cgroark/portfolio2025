@@ -150,7 +150,7 @@ function Projects() {
       <h1 style={{ marginBottom: '20px', textAlign: 'right', display: 'block', fontWeight: '300' }}>
         Projects
       </h1>
-      <ProjectWrapper>
+      <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
         <a href="https://bookends.design" target="_blank" rel="noopener noreferrer">
           <ProjectImage src={bookends} alt="Book Ends" />
         </a>
@@ -250,7 +250,7 @@ function Projects() {
         </PaceSection>
       </ProjectWrapper>
       <LineBreak />
-      <ProjectWrapper>
+      <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
         <a href="https://participate.online/" target="_blank" rel="noopener noreferrer">
           <ProjectImage borderColor="yellow" src={participate} alt="Participate Online" />
         </a>
