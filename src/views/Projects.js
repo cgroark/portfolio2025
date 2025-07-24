@@ -149,7 +149,7 @@ function Projects() {
   return (
     <ProjectsContainer>
       <h1 style={{ marginBottom: '20px', textAlign: 'right', display: 'block', fontWeight: '300' }}>
-        Projects
+        Recent Projects
       </h1>
       <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
         <a href="https://bookends.design" target="_blank" rel="noopener noreferrer">
@@ -252,7 +252,7 @@ function Projects() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <CodeBlockIcon size={32} />
             <p>
-              React, HTML, SCSS, Netlify
+              React, JSX, styled-components, Netlify
             </p>
           </div>
             <ArrowUp>

@@ -85,7 +85,7 @@ function About() {
             <Card borderColor="pink">
               <h3 style={{ marginTop: '10px' }}>Full Stack Development</h3>
               <p>
-                React, Angular, TypeScript, JavaScript, ES6, RxJS, JQuery, CSS, SCSS, HTML, Data Visualization (Chart.js, Recharts, amCharts)
+                React, Angular, TypeScript, JavaScript, ES6, JSX, RxJS, JQuery, CSS, SCSS, styled-components, HTML, Data Visualization (Chart.js, Recharts, amCharts)
               </p>
               <p>
                 Bootstrap, Material UI, WordPress CMS, Jasmine and Karma (Angular testing framework)
