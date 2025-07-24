@@ -1,4 +1,9 @@
-import { ArrowSquareOutIcon, GithubLogoIcon, CodeIcon, CodeBlockIcon, BookOpenTextIcon, AngularLogoIcon, PersonSimpleRunIcon } from '@phosphor-icons/react';
+import {
+  ArrowBendUpRightIcon, ArrowBendRightDownIcon,
+  ArrowSquareOutIcon, GithubLogoIcon,
+  CodeIcon, CodeBlockIcon, BookOpenTextIcon,
+  AngularLogoIcon, PersonSimpleRunIcon
+} from '@phosphor-icons/react';
 import styled from 'styled-components';
 import bookends from '../assets/bookEnds.png';
 import PaceHeader from '../components/PaceHeader';
@@ -17,9 +22,14 @@ const Card = styled.div`
   border-radius: 10px;
   height: fit-content;
   width: calc(60% - 10px);
+  transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
   @media (max-width: 768px) {
     width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
   }
 `;
 
@@ -27,9 +37,14 @@ const ProjectImage = styled.img`
   width: 300px;
   border-radius: 20px;
   border: solid 3px ${props => props.theme.offWhite};
+  transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
   @media (max-width: 768px) {
     width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
   }
 `;
 
@@ -50,21 +65,43 @@ const ExternalButton = styled.a`
   }
 `;
 
-const NotificationButton = styled.div`
-  display: block;
-  margin: 20px auto 0 auto;
-  width: fit-content;
-  padding: 10px 24px;
-`;
+
 
 const PaceSection = styled.div`
   border-radius: 20px;
   border: solid 3px ${props => props.theme.offWhite};
   width: calc(30% - 10px);
   padding: 20px 10px;
+  transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
   @media (max-width: 768px) {
     width: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+`;
+
+const ArrowUp = styled.div`
+  display: block;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  padding: 10px 24px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const ArrowDown = styled.div`
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  padding: 10px 24px;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
   }
 `;
 
@@ -146,12 +183,12 @@ function Projects() {
               React, HTML, SCSS, Netlify
             </p>
           </div>
-          <NotificationButton>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              Play With Below
-              <ArrowSquareOutIcon size={24} />
-            </div>
-          </NotificationButton>
+            <ArrowUp>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                Test it out!
+                <ArrowBendUpRightIcon size={24} />
+              </div>
+            </ArrowUp>
           <ExternalButton
             href="https://race-pace-yourself.netlify.app/"
             target="_blank"
@@ -162,6 +199,12 @@ function Projects() {
               <ArrowSquareOutIcon size={24} />
             </div>
           </ExternalButton>
+          <ArrowDown>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                Test it out!
+                <ArrowBendRightDownIcon size={24} />
+              </div>
+            </ArrowDown>
         </Card>
         <PaceSection>
           <PaceHeader />

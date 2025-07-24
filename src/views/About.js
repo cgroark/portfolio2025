@@ -32,9 +32,14 @@ const HeadShot = styled.img`
   border: 3px solid ${props => props.theme.offWhite};
   margin-right: -60px;
   z-index: 1;
+  transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
   @media (max-width: 768px) {
     width: 110px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 `
 const Card = styled.div`
@@ -47,10 +52,15 @@ const Card = styled.div`
   height: fit-content;
   width: calc(50% - 60px);
   margin-top: ${({ marginTop }) => marginTop || '0'};
+  transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 0;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
   }
 `;
 
