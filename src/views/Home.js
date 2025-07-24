@@ -17,7 +17,7 @@ const HomeCard = styled.div`
     padding: 20px;
     border-radius: 10px;
     max-width: 460px;
-    margin: 20% auto 0;
+    margin: 15% auto 0;
     text-align: center;
 
     @media (max-width: 768px) {
