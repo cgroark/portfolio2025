@@ -27,7 +27,6 @@ const SubmitButton = styled.button`
   color: white;
   background-color: #15aa93;
   border-radius: 5px;
-  width: 290px;
   border: none;
   font-family: "Saira", sans-serif;
 
