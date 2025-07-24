@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { CodeIcon, HeadCircuitIcon, MailboxIcon, WarehouseIcon } from "@phosphor-icons/react";
 
 import styled from "styled-components";
@@ -17,18 +17,22 @@ const NavItem = styled.li`
   padding-left: 25px;
 `;
 
-const NavLink = styled(Link)`
+const StyledNavLink = styled(NavLink)`
   color: ${props => props.theme.offWhite};
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 5px;
-  border-bottom: 3px solid transparent;
+  border-bottom: 4px solid transparent;
   transition: border-bottom 0.3s ease;
   padding-bottom: 3px;
 
+  &.active {
+    border-bottom: 4px solid ${props => props.theme.yellow};
+  }
+
   &:hover {
-    border-bottom: 3px solid ${props => props.theme.purple};
+    border-bottom: 4px solid ${props => props.theme.purple};
   }
 `;
 
@@ -37,28 +41,28 @@ function Navbar() {
         <Nav>
           <NavList>
             <NavItem>
-              <NavLink to="/">
+              <StyledNavLink to="/" end>
                 <WarehouseIcon size={24} />
                 Home
-              </NavLink>
+              </StyledNavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/about">
+              <StyledNavLink to="/about">
                 <HeadCircuitIcon size={24} />
                 About
-              </NavLink>
+              </StyledNavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/projects">
+              <StyledNavLink to="/projects">
                 <CodeIcon size={24} />
                 Projects
-              </NavLink>
+              </StyledNavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/contact">
+              <StyledNavLink to="/contact">
                 <MailboxIcon size={24} />
                 Contact
-              </NavLink>
+              </StyledNavLink>
             </NavItem>
           </NavList>
         </Nav>

@@ -72,7 +72,7 @@ function About() {
           </h1>
           <ProfileContainer >
             <HeadShot src={groark} alt="Colin Groark" />
-            <Card style={{ marginBottom: '0', padding: '30px 20px', width: '68%' }}>
+            <Card style={{ marginBottom: '0', padding: '30px 20px', width: '68%', transform: 'none' }}>
               <ProfileText>
                 <h2 style={{ margin: '0 0 10px 0' }}>
                   Colin Groark
@@ -118,10 +118,10 @@ function About() {
             <Card borderColor="purple" marginTop="-106px">
               <h3 style={{ marginTop: '10px' }}>What Others Say</h3>
               <p>
-                "<em>I could not recommend Colin more highly. He is one of my favorite people to have ever worked with. His combination of technical talent and understanding of the important work we do is nearly impossible to replicate. When hiring devs, I've found the latter to be incredibly hard to find.</em>" <strong> - Ray Outlaw, former manager (EnviroIssues)</strong>
+                "<em>Colin's blend of technical excellence, rapid problem-solving, and collaborative spirit has been instrumental in delivering a wide variety of new features on time and with high quality.</em>" <strong> - Lucas Howell, engineering manager (Nexleaf Analytics)</strong>
               </p>
               <p>
-                "<em>Colin's blend of technical excellence, rapid problem-solving, and collaborative spirit has been instrumental in delivering a wide variety of new features on time and with high quality.</em>" <strong> - Lucas Howell, engineering manager (Nexleaf Analytics)</strong>
+                "<em>I could not recommend Colin more highly. He is one of my favorite people to have ever worked with. His combination of technical talent and understanding of the important work we do is nearly impossible to replicate. When hiring devs, I've found the latter to be incredibly hard to find.</em>" <strong> - Ray Outlaw, former manager (EnviroIssues)</strong>
               </p>
               <p>
                 "<em>Colin stands out amongst his colleagues at being incredibly detail oriented and communicative about what he's tackling and how he's approaching it...He's also consistently among the most consistent at delivering on his commitments.</em>" <strong> - Lucas Howell, engineering manager (Nexleaf Analytics)</strong>
