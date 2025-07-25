@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const Button = styled.button`
+const Button = styled.button.withConfig({
+  shouldForwardProp: (prop) => prop !== 'active'
+})`
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -80,7 +82,9 @@ const TimeInputField = styled.input`
   }
 `;
 
-const TimeInputContainer = styled.div`
+const TimeInputContainer = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'calculatePace'
+})`
   display: flex;
   align-items: center;
   width: ${(props) => (props.calculatePace === 'pace' ? '220px' : '115px')};
@@ -284,13 +288,13 @@ const RunForm = () => {
     <div style={{maxWidth: '496px'}}>
       <FlexDiv>
         <Button
-          active={calculatePace === 'pace'}
+          active={calculatePace === 'pace' ? true : undefined}
           onClick={() => handleOptionChange('pace')}
         >
           Race Pace for a Goal Time
         </Button>
         <Button
-          active={calculatePace === 'time'}
+          active={calculatePace === 'time' ? true : undefined}
           onClick={() => handleOptionChange('time')}
         >
           Goal Time Based on Pace

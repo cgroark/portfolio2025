@@ -8,7 +8,7 @@ const HomeContainer = styled.div`
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 `;
 
@@ -17,7 +17,7 @@ const HomeCard = styled.div`
     padding: 20px;
     border-radius: 10px;
     max-width: 460px;
-    margin: 15% auto 0;
+    margin: 15% auto 10px;
     text-align: center;
 
     @media (max-width: 768px) {

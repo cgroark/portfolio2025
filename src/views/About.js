@@ -42,16 +42,18 @@ const HeadShot = styled.img`
     transform: scale(1.05);
   }
 `
-const Card = styled.div`
+const Card = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'marginTop' && prop !== 'borderColor'
+})`
   background-color: ${props => props.theme.offWhite};
   color: ${props => props.theme.lightBlack};
   padding: 20px;
   border-radius: 10px;
   border: solid 3px;
-  border-color: ${({ borderColor, theme }) => theme[borderColor] || theme.lightBlack};
+  border-color: ${props => props.theme[props.borderColor] || props.theme.lightBlack};
   height: fit-content;
   width: calc(50% - 60px);
-  margin-top: ${({ marginTop }) => marginTop || '0'};
+  margin-top: ${props => props.marginTop || '0'};
   transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
   @media (max-width: 768px) {
@@ -85,7 +87,7 @@ function About() {
             <Card borderColor="pink">
               <h3 style={{ marginTop: '10px' }}>Full Stack Development</h3>
               <p>
-                React, Angular, TypeScript, JavaScript, ES6, JSX, RxJS, JQuery, CSS, SCSS, styled-components, HTML, Data Visualization (Chart.js, Recharts, amCharts)
+                React, Angular, TypeScript, JavaScript, ES6, JSX, RxJS, JQuery, CSS, SCSS, styled-components, HTML, Data Visualization (Chart.js, Recharts, amCharts), Ionic/Capacitor
               </p>
               <p>
                 Bootstrap, Material UI, WordPress CMS, Jasmine and Karma (Angular testing framework)
@@ -118,17 +120,17 @@ function About() {
             <Card borderColor="purple" marginTop="-106px">
               <h3 style={{ marginTop: '10px' }}>What Others Say</h3>
               <p>
-                "<em>Colin's blend of technical excellence, rapid problem-solving, and collaborative spirit has been instrumental in delivering a wide variety of new features on time and with high quality...He's also remarkably consistent in delivering on his commitments.</em>" <br />
-                <blockquote>
-                  <strong> - Lucas Howell, engineering manager (Nexleaf Analytics)</strong>
-                </blockquote>
+                "<em>Colin's blend of technical excellence, rapid problem-solving, and collaborative spirit has been instrumental in delivering a wide variety of new features on time and with high quality...He's also remarkably consistent in delivering on his commitments.</em>"
               </p>
+              <blockquote>
+                <strong> - Lucas Howell, engineering manager (Nexleaf Analytics)</strong>
+              </blockquote>
               <p>
-                "<em>I could not recommend Colin more highly. He is one of my favorite people to have ever worked with. His combination of technical talent and understanding of the important work we do is nearly impossible to replicate. When hiring devs, I've found the latter to be incredibly hard to find.</em>" <br />
-                <blockquote>
-                  <strong> - Ray Outlaw, former manager (EnviroIssues)</strong>
-                </blockquote>
+                "<em>I could not recommend Colin more highly. He is one of my favorite people to have ever worked with. His combination of technical talent and understanding of the important work we do is nearly impossible to replicate. When hiring devs, I've found the latter to be incredibly hard to find.</em>"
               </p>
+              <blockquote>
+                  <strong> - Ray Outlaw, former manager (EnviroIssues)</strong>
+              </blockquote>
             </Card>
           </div>
         </AboutContainer>

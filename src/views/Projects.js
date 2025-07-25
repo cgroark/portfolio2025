@@ -1,6 +1,6 @@
 import {
   ArrowBendUpLeftIcon, ArrowBendRightDownIcon,
-  ArrowSquareOutIcon, GithubLogoIcon,
+  ArrowSquareOutIcon, ChartLineIcon, GithubLogoIcon,
   CodeIcon, CodeBlockIcon, BookOpenTextIcon,
   AngularLogoIcon, PersonSimpleRunIcon,
   SubtractSquareIcon,
@@ -67,7 +67,9 @@ const Card = styled.div`
   }
 `;
 
-const ProjectImage = styled.img`
+const ProjectImage = styled.img.withConfig({
+  shouldForwardProp: (prop) => prop !== 'borderColor'
+})`
   width: 300px;
   border-radius: 20px;
   border: solid 3px;
@@ -209,15 +211,15 @@ function Projects() {
             </p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <StorefrontIcon size={32} />
+            <ChartLineIcon size={32} />
             <p>
-              Built as key contributor to the Nexleaf Analytics engineering team. Tracking real-time data from remote temperature sensors, monitoring vaccine temperatures around the globe. Iterating quickly in line with Product and Design teams, and repsonding quickly to user needs and client feedback. Consitently updating UI, expanding test coverage, supporting devleopment of AI chatbot, and broadening use of data visualization.
+              Built as key contributor to the Nexleaf Analytics engineering team. Tracking real-time data from remote temperature sensors, monitoring vaccine temperatures around the globe. Iterating quickly in line with Product and Design teams, and responding quickly to user needs and client feedback. Consitently updating UI, expanding test coverage, supporting devleopment of AI chatbot, and broadening use of data visualization.
             </p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <CodeBlockIcon size={32} />
             <p>
-              Angular, TypeScript, RxJS, amCharts (data visualization), HTML, SCSS, Bootstrap, Material UI, RESTful API, Python, Django, MongoDB
+              Angular, TypeScript, RxJS, amCharts (data visualization), HTML, SCSS, Bootstrap, Material UI, Ionic/Capacitor (multi-platform mobile app dev), RESTful API, Python, Django, MongoDB
             </p>
           </div>
         </Card>
