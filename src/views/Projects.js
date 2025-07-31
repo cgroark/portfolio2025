@@ -212,9 +212,14 @@ function Projects() {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <ChartLineIcon size={32} />
-            <p>
-              Built as key contributor to the Nexleaf Analytics engineering team. Tracking real-time data from remote temperature sensors, monitoring vaccine temperatures around the globe. Iterating quickly in line with Product and Design teams, and responding quickly to user needs and client feedback. Consitently updating UI, expanding test coverage, supporting devleopment of AI chatbot, and broadening use of data visualization.
-            </p>
+            <div>
+              <p>
+                Key contributor and team lead developing SaaS data dashboard, tracking real-time data from remote temperature sensors for vaccine temperatures around the globe.
+              </p>
+              <p>
+                Driving rapid iteration in line with Product and Design teams, and responding quickly to user needs and client feedback. Consistently updating UI, expanding test coverage, supporting development of AI LLM chatbot, and broadening use of data visualization.
+              </p>
+            </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <CodeBlockIcon size={32} />
