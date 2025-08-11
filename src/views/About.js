@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+import { DownloadIcon, ChatsCircleIcon, CodeIcon, CloudCheckIcon, FinnTheHumanIcon } from "@phosphor-icons/react";
 import groark from '../assets/groark.jpeg';
+import groarkResume from '../assets/Groark_Colin_resume-2025.pdf';
 
 const AboutContainer = styled.div`
   max-width: 960px;
@@ -66,6 +68,26 @@ const Card = styled.div.withConfig({
   }
 `;
 
+const DownloadLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  padding: 10px 24px;
+  background: ${({ theme }) => theme.purple};
+  color: ${({ theme }) => theme.offWhite};
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background ease-in-out 0.3s;
+
+  &:hover {
+    background: ${({ theme }) => theme.darkPurple};
+  }
+`;
+
 function About() {
     return (
         <AboutContainer>
@@ -85,7 +107,10 @@ function About() {
           </ProfileContainer>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'space-between' }}>
             <Card borderColor="pink">
-              <h3 style={{ marginTop: '10px' }}>Full Stack Development</h3>
+              <h3 style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                Full Stack Development
+                <CodeIcon size={32} />
+              </h3>
               <p>
                 React, Angular, TypeScript, JavaScript, ES6, JSX, RxJS, JQuery, CSS, SCSS, styled-components, HTML, Data Visualization (Chart.js, Recharts, amCharts), Ionic/Capacitor
               </p>
@@ -97,28 +122,44 @@ function About() {
               </p>
             </Card>
             <Card borderColor="yellow">
-              <h3 style={{ marginTop: '10px' }}>DevOps and Design</h3>
+              <h3 style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                DevOps and Design
+                <CloudCheckIcon size={32} />
+              </h3>
               <p>
                 Microsoft Azure, Docker, Buildbot, Git, Figma, PhotoShop, Mural, Google Analytics, Fullstory
               </p>
             </Card>
             <Card borderColor="teal">
-              <h3 style={{ marginTop: '10px' }}>Recent Experience</h3>
+              <h3 style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                Recent Experience
+                <FinnTheHumanIcon size={32} />
+              </h3>
               <p>
-                Lead development of complex frontend features from inception to launch.
+                Team Lead for development of complex SaaS features from inception to launch: flagging decision points, guiding architecture, reviewing and delivering code, and aligning implementation to ensure compatibility and maintainability of new features.
               </p>
               <p>
                 Partner with Product to iterate on UX, resolve ambiguity, and deliver polished, high-impact, responsive UI in line with Figma designs.
               </p>
               <p>
-                Team lead for new features: flagging decision points, guiding architecture, reviewing and delivering code, and aligning implementation to ensure compatibility and maintainability of new features.
+                Owned the re-design, user testing, implementation and delivery of critical device installation dashboard workflow that supports every technician in the field ahead of a major hardware release (acting Product Manager for feature rollout).
               </p>
               <p>
                 Embrace iteration and feedback loops, quickly adapting frontend work to shifting requirements or design constraints.
               </p>
+              <p>
+                Manage Azure blob storage and be responsible for database redundancy and retention policies.
+              </p>
+              <DownloadLink href={groarkResume} target="_blank" rel="noopener noreferrer">
+              <DownloadIcon size={32} />
+                Resume
+            </DownloadLink>
             </Card>
             <Card borderColor="purple" marginTop="-106px">
-              <h3 style={{ marginTop: '10px' }}>What Others Say</h3>
+              <h3 style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                What Others Say
+                <ChatsCircleIcon size={32} />
+              </h3>
               <p>
                 "<em>Colin's blend of technical excellence, rapid problem-solving, and collaborative spirit has been instrumental in delivering a wide variety of new features on time and with high quality...He's also remarkably consistent in delivering on his commitments.</em>"
               </p>
@@ -129,7 +170,7 @@ function About() {
                 "<em>I could not recommend Colin more highly. He is one of my favorite people to have ever worked with. His combination of technical talent and understanding of the important work we do is nearly impossible to replicate. When hiring devs, I've found the latter to be incredibly hard to find.</em>"
               </p>
               <blockquote>
-                  <strong> - Ray Outlaw, former manager (EnviroIssues)</strong>
+                  <strong> - Ray Outlaw (PSE), former manager at EnviroIssues</strong>
               </blockquote>
             </Card>
           </div>

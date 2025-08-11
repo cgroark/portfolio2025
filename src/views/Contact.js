@@ -1,5 +1,5 @@
 import { GithubLogoIcon, LinkedinLogoIcon, PaperPlaneTiltIcon, DownloadIcon } from "@phosphor-icons/react";
-import groarkResume from '../assets/Groark-Colin_resume_July2025.pdf';
+import groarkResume from '../assets/Groark_Colin_resume-2025.pdf';
 import styled from 'styled-components';
 
 const ContactContainer = styled.div`
@@ -49,14 +49,23 @@ const ExternalLink = styled.a`
 `;
 
 const DownloadLink = styled.a`
-  color: ${props => props.theme.lightBlack};
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 20px;
-  margin: 20px;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  padding: 10px 24px;
+  background: ${({ theme }) => theme.purple};
+  color: ${({ theme }) => theme.offWhite};
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background ease-in-out 0.3s;
+
+  &:hover {
+    background: ${({ theme }) => theme.darkPurple};
+  }
 `;
 
 const LineBreak = styled.hr`
@@ -78,10 +87,7 @@ function Contact() {
       <EmailLink href="mailto:colingroark@gmail.com">
         colingroark@gmail.com
       </EmailLink>
-      <DownloadLink href={groarkResume} target="_blank" rel="noopener noreferrer">
-        <DownloadIcon size={32} />
-        Resume
-      </DownloadLink>
+
       <div style={{ display: 'flex', justifyContent: 'center', gap: '50px', margin: '40px 0' }}>
         <ExternalLink href="https://github.com/cgroark" target="_blank" rel="noopener noreferrer">
           <GithubLogoIcon size={36} />
@@ -90,6 +96,10 @@ function Contact() {
           <LinkedinLogoIcon size={36} />
         </ExternalLink>
       </div>
+      <DownloadLink href={groarkResume} target="_blank" rel="noopener noreferrer">
+        <DownloadIcon size={32} />
+        Resume
+      </DownloadLink>
       </Card>
     </ContactContainer>
   )
