@@ -53,6 +53,7 @@ const Card = styled.div.withConfig({
   border-radius: 10px;
   border: solid 3px;
   border-color: ${props => props.theme[props.borderColor] || props.theme.lightBlack};
+  box-shadow: 6px 6px ${props => props.theme[props.boxShadow] || props.theme.lightBlack};
   height: fit-content;
   width: calc(50% - 60px);
   margin-top: ${props => props.marginTop || '0'};
@@ -82,6 +83,8 @@ const DownloadLink = styled.a`
   border-radius: 10px;
   text-decoration: none;
   transition: background ease-in-out 0.3s;
+  box-shadow: 4px 4px 0 ${({ theme }) => theme.yellow};
+
 
   &:hover {
     background: ${({ theme }) => theme.darkPurple};
@@ -96,7 +99,7 @@ function About() {
           </h1>
           <ProfileContainer >
             <HeadShot src={groark} alt="Colin Groark" />
-            <Card style={{ marginBottom: '0', padding: '30px 20px', width: '68%', transform: 'none' }}>
+            <Card style={{ marginBottom: '0', padding: '30px 20px', width: '68%', transform: 'none' }} borderColor="teal" boxShadow="pink">
               <ProfileText>
                 <h2 style={{ margin: '0 0 10px 0' }}>
                   Colin Groark
@@ -106,7 +109,7 @@ function About() {
             </Card>
           </ProfileContainer>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'space-between' }}>
-            <Card borderColor="pink">
+            <Card borderColor="pink" boxShadow="teal">
               <h3 style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                 Full Stack Development
                 <CodeIcon size={32} />
@@ -121,7 +124,7 @@ function About() {
                 Node.js, SQL, PostgreSQL, Python, GraphQL
               </p>
             </Card>
-            <Card borderColor="yellow">
+            <Card borderColor="yellow" boxShadow="purple">
               <h3 style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                 DevOps and Design
                 <CloudCheckIcon size={32} />
@@ -130,7 +133,7 @@ function About() {
                 Microsoft Azure, Docker, Buildbot, Git, Figma, PhotoShop, Mural, Google Analytics, Fullstory
               </p>
             </Card>
-            <Card borderColor="teal">
+            <Card borderColor="teal" boxShadow="pink">
               <h3 style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                 Recent Experience
                 <FinnTheHumanIcon size={32} />
@@ -155,7 +158,7 @@ function About() {
                 Resume
             </DownloadLink>
             </Card>
-            <Card borderColor="purple" marginTop="-106px">
+            <Card borderColor="purple" marginTop="-106px" boxShadow="yellow">
               <h3 style={{ marginTop: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                 What Others Say
                 <ChatsCircleIcon size={32} />

@@ -15,6 +15,7 @@ const Card = styled.div`
   padding: 20px;
   border-radius: 10px;
   height: fit-content;
+  box-shadow: 6px 6px 0 ${({ theme }) => theme.teal};
 `;
 
 const EmailLink = styled.a`
@@ -62,6 +63,7 @@ const DownloadLink = styled.a`
   border-radius: 10px;
   text-decoration: none;
   transition: background ease-in-out 0.3s;
+  box-shadow: 4px 4px 0 ${({ theme }) => theme.yellow};
 
   &:hover {
     background: ${({ theme }) => theme.darkPurple};

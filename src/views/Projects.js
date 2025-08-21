@@ -74,6 +74,7 @@ const ProjectImage = styled.img.withConfig({
   border-radius: 20px;
   border: solid 3px;
   border-color: ${({ borderColor, theme }) => theme[borderColor] || theme.offWhite};
+  box-shadow: 6px 6px ${props => props.theme[props.boxShadow] || props.theme.lightBlack};
   transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
   @media (max-width: 768px) {
@@ -97,7 +98,7 @@ const ExternalButton = styled.a`
   border-radius: 10px;
   text-decoration: none;
   transition: background ease-in-out 0.3s;
-
+  box-shadow: 4px 4px 0 ${({ theme }) => theme.yellow};
   &:hover {
     background: ${({ theme }) => theme.darkPurple};
   }
@@ -106,6 +107,7 @@ const ExternalButton = styled.a`
 const PaceSection = styled.div`
   border-radius: 20px;
   border: solid 3px ${props => props.theme.offWhite};
+  box-shadow: 6px 6px ${props => props.theme[props.boxShadow] || props.theme.lightBlack};
   width: calc(30% - 10px);
   padding: 20px 10px;
   transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -155,7 +157,7 @@ function Projects() {
       </h1>
       <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
         <a href="https://bookends.design" target="_blank" rel="noopener noreferrer">
-          <ProjectImage src={bookends} alt="Book Ends" />
+          <ProjectImage src={bookends} alt="Book Ends" borderColor="pink" boxShadow="teal" />
         </a>
         <Card>
           <h2 style={{ marginTop: '10px' }}>
@@ -228,11 +230,11 @@ function Projects() {
             </p>
           </div>
         </Card>
-        <ProjectImage borderColor="teal" src={ctDashboard} alt="ColdTrace Dashboard" />
+        <ProjectImage borderColor="teal" boxShadow="pink" src={ctDashboard} alt="ColdTrace Dashboard" />
       </ProjectWrapper>
       <LineBreak />
       <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
-        <PaceSection>
+        <PaceSection boxShadow="teal">
           <PaceHeader />
         </PaceSection>
         <Card>
@@ -324,7 +326,7 @@ function Projects() {
           </ExternalButton>
         </Card>
         <a href="https://participate.online/" target="_blank" rel="noopener noreferrer">
-          <ProjectImage borderColor="yellow" src={participate} alt="Participate Online" />
+          <ProjectImage borderColor="yellow" boxShadow="purple" src={participate} alt="Participate Online" />
         </a>
       </ProjectWrapper>
 
