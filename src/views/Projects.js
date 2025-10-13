@@ -51,10 +51,6 @@ const Card = styled.div`
     width: 100%;
   }
 
-  &:hover {
-    transform: translateY(-10px);
-  }
-
   svg {
     width: 32px !important;
     height: 32px !important;
@@ -80,10 +76,6 @@ const ProjectImage = styled.img.withConfig({
   @media (max-width: 768px) {
     width: 100%;
     max-width: 360px;
-  }
-
-  &:hover {
-    transform: translateY(-10px);
   }
 `;
 
@@ -115,10 +107,6 @@ const PaceSection = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     max-width: 360px;
-  }
-
-  &:hover {
-    transform: translateY(-10px);
   }
 `;
 

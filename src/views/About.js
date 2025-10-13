@@ -63,10 +63,6 @@ const Card = styled.div.withConfig({
     width: 100%;
     margin-top: 0;
   }
-
-  &:hover {
-    transform: translateY(-10px);
-  }
 `;
 
 const DownloadLink = styled.a`
@@ -84,7 +80,6 @@ const DownloadLink = styled.a`
   text-decoration: none;
   transition: background ease-in-out 0.3s;
   box-shadow: 4px 4px 0 ${({ theme }) => theme.yellow};
-
 
   &:hover {
     background: ${({ theme }) => theme.darkPurple};
