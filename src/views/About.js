@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { DownloadIcon, ChatsCircleIcon, CodeIcon, CloudCheckIcon, FinnTheHumanIcon } from "@phosphor-icons/react";
 import groark from '../assets/groark.jpeg';
-import groarkResume from '../assets/Groark_Colin-resume-2025.pdf';
+import groarkResume from '../assets/Groark_Colin-Resume-2025.pdf';
 
 const AboutContainer = styled.div`
   max-width: 960px;
