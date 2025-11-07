@@ -1,5 +1,5 @@
 import { GithubLogoIcon, LinkedinLogoIcon, PaperPlaneTiltIcon, DownloadIcon } from "@phosphor-icons/react";
-import groarkResume from '../assets/Groark_Colin-Resume-2025.pdf';
+import groarkResume from '../assets/colingroark-resume.pdf';
 import styled from 'styled-components';
 
 const ContactContainer = styled.div`
