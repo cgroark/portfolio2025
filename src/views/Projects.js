@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   ArrowBendUpLeftIcon, ArrowBendRightDownIcon,
   ArrowSquareOutIcon, ChartLineIcon, GithubLogoIcon,
@@ -60,6 +61,18 @@ const Card = styled.div`
     max-height: 32px;
     flex-shrink: 0;
     flex-grow: 0;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  min-height: 270px;
+
+  img {
+    opacity: ${({ $loaded }) => ($loaded ? 1 : 0)};
+    filter: ${({ $loaded }) => ($loaded ? 'blur(0)' : 'blur(10px)')};
+    transform: scale(${({ $loaded }) => ($loaded ? 1 : 1.05)});
+    transition: opacity 0.4s ease, filter 0.6s ease, transform 0.6s ease;
   }
 `;
 
@@ -138,6 +151,8 @@ const LineBreak = styled.hr`
 `;
 
 function Projects() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <ProjectsContainer>
       <h1 style={{ marginBottom: '20px', textAlign: 'right', display: 'block', fontWeight: '300' }}>
@@ -145,7 +160,15 @@ function Projects() {
       </h1>
       <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
         <a href="https://bookends.design" target="_blank" rel="noopener noreferrer">
-          <ProjectImage src={bookends} alt="Book Ends" borderColor="pink" boxShadow="teal" />
+          <ImageWrapper $loaded={loaded}>
+            <ProjectImage
+              loading="lazy"
+              src={bookends} alt="Book Ends"
+              borderColor="pink"
+              boxShadow="teal"
+              onLoad={() => setLoaded(true)}
+            />
+            </ImageWrapper>
         </a>
         <Card>
           <h2 style={{ marginTop: '10px' }}>
@@ -189,36 +212,45 @@ function Projects() {
       <LineBreak />
       <ProjectWrapper>
       <Card>
-          <h2 style={{ marginTop: '10px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              ColdTrace Dashboard, Nexleaf Analytics
-            </div>
-          </h2>
+        <h2 style={{ marginTop: '10px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <AngularLogoIcon size={32} />
+            ColdTrace Dashboard, Nexleaf Analytics
+          </div>
+        </h2>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <AngularLogoIcon size={32} />
+          <p>
+            Angular Frontend, Python/Django Backend
+          </p>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <ChartLineIcon size={32} />
+          <div>
             <p>
-              Angular Frontend, Python/Django Backend
+              Key contributor and team lead developing SaaS data dashboard, tracking real-time data from remote temperature sensors for vaccine temperatures around the globe.
+            </p>
+            <p>
+              Driving rapid iteration in line with Product and Design teams, and responding quickly to user needs and client feedback. Consistently updating UI, expanding test coverage, supporting development of AI LLM chatbot, and broadening use of data visualization.
             </p>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <ChartLineIcon size={32} />
-            <div>
-              <p>
-                Key contributor and team lead developing SaaS data dashboard, tracking real-time data from remote temperature sensors for vaccine temperatures around the globe.
-              </p>
-              <p>
-                Driving rapid iteration in line with Product and Design teams, and responding quickly to user needs and client feedback. Consistently updating UI, expanding test coverage, supporting development of AI LLM chatbot, and broadening use of data visualization.
-              </p>
-            </div>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <CodeBlockIcon size={32} />
-            <p>
-              Angular, TypeScript, RxJS, amCharts (data visualization), HTML, SCSS, Bootstrap, Material UI, Ionic/Capacitor (multi-platform mobile app dev), RESTful API, Python, Django, MongoDB
-            </p>
-          </div>
-        </Card>
-        <ProjectImage borderColor="teal" boxShadow="pink" src={ctDashboard} alt="ColdTrace Dashboard" />
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <CodeBlockIcon size={32} />
+          <p>
+            Angular, TypeScript, RxJS, amCharts (data visualization), HTML, SCSS, Bootstrap, Material UI, Ionic/Capacitor (multi-platform mobile app dev), RESTful API, Python, Django, MongoDB
+          </p>
+        </div>
+      </Card>
+      <ImageWrapper $loaded={loaded}>
+        <ProjectImage
+          loading="lazy"
+          borderColor="teal"
+          boxShadow="pink"
+          src={ctDashboard}
+          alt="ColdTrace Dashboard"
+          onLoad={() => setLoaded(true)}
+          />
+        </ImageWrapper>
       </ProjectWrapper>
       <LineBreak />
       <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
@@ -314,7 +346,16 @@ function Projects() {
           </ExternalButton>
         </Card>
         <a href="https://participate.online/" target="_blank" rel="noopener noreferrer">
-          <ProjectImage borderColor="yellow" boxShadow="purple" src={participate} alt="Participate Online" />
+          <ImageWrapper $loaded={loaded}>
+            <ProjectImage
+              loading="lazy"
+              borderColor="yellow"
+              boxShadow="purple"
+              src={participate}
+              alt="Participate Online"
+              onLoad={() => setLoaded(true)}
+            />
+          </ImageWrapper>
         </a>
       </ProjectWrapper>
 
