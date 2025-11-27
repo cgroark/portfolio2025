@@ -5,10 +5,12 @@ import {
   CodeIcon, CodeBlockIcon, BookOpenTextIcon,
   AngularLogoIcon, PersonSimpleRunIcon,
   SubtractSquareIcon,
-  StorefrontIcon
+  StorefrontIcon,
+  FilmReelIcon
 } from '@phosphor-icons/react';
 import styled from 'styled-components';
 import bookends from '../assets/bookEnds.png';
+import missedMovies from '../assets/missedMovies.png';
 import participate from '../assets/po-site.png';
 import ctDashboard from '../assets/CTdashboard.png';
 import PaceHeader from '../components/PaceHeader';
@@ -86,6 +88,10 @@ const ProjectImage = styled.img.withConfig({
   box-shadow: 6px 6px ${props => props.theme[props.boxShadow] || props.theme.lightBlack};
   transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
+  &:hover {
+    transform: scale(1.03);
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     max-width: 360px;
@@ -158,6 +164,61 @@ function Projects() {
       <h1 style={{ marginBottom: '20px', textAlign: 'right', display: 'block', fontWeight: '300' }}>
         Recent Projects
       </h1>
+      <LineBreak />
+      <ProjectWrapper>
+        <Card>
+          <h2 style={{ marginTop: '10px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <a style={{ color: 'inherit' }} href="https://github.com/cgroark/missed-movies" target="_blank" rel="noopener noreferrer">
+                <GithubLogoIcon size={32} />
+              </a>
+              Missed Movies React App
+            </div>
+          </h2>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+             <CodeIcon size={32} />
+            <p>
+              Full Stack React/TypeScript, Node.js/PostgreSQL CRUD web application
+            </p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <FilmReelIcon size={32} />
+            <p>
+            Search and keep track of movies you've been meaning to watch, organize films into categories.
+            </p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <CodeBlockIcon size={32} />
+            <p>
+              React, TypeScript, Node.js, PostgreSQL, Supabase, JSX, CSS, Styled Components, Radix UI, Vercel, OMDb API
+            </p>
+          </div>
+          <ExternalButton
+            href="https://missedmovies.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              Visit Project Site
+              <ArrowSquareOutIcon size={32} />
+            </div>
+          </ExternalButton>
+        </Card>
+        <a href="https://missedmovies.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <ImageWrapper $loaded={loaded}>
+            <ProjectImage
+              loading="lazy"
+              borderColor="teal"
+              boxShadow="pink"
+              src={missedMovies}
+              alt="Missed Movies"
+              onLoad={() => setLoaded(true)}
+            />
+          </ImageWrapper>
+        </a>
+      </ProjectWrapper>
+      <LineBreak />
       <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
         <a href="https://bookends.design" target="_blank" rel="noopener noreferrer">
           <ImageWrapper $loaded={loaded}>
@@ -182,7 +243,7 @@ function Projects() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <AngularLogoIcon size={32} />
             <p>
-              Fullstack Angular CRUD web application
+              Fullstack Angular/TypeScript CRUD web application
             </p>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
