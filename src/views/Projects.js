@@ -220,7 +220,7 @@ function Projects() {
       </ProjectWrapper>
       <LineBreak />
       <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
-        <a href="https://bookends.design" target="_blank" rel="noopener noreferrer">
+        <a href="https://bookends.ink" target="_blank" rel="noopener noreferrer">
           <ImageWrapper $loaded={loaded}>
             <ProjectImage
               loading="lazy"
@@ -259,7 +259,7 @@ function Projects() {
             </p>
           </div>
           <ExternalButton
-            href="https://bookends.design"
+            href="https://bookends.ink"
             target="_blank"
             rel="noopener noreferrer"
           >
