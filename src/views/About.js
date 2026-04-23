@@ -125,7 +125,7 @@ function About() {
                 <CloudCheckIcon size={32} />
               </h3>
               <p>
-                Microsoft Azure, DynamoDB, AWS, Supabase, Docker, Vercel, Netlify, Buildbot, Git (Github - Graphite CI/CD), Figma, PhotoShop, Mural, Google Analytics, Fullstory, Asana and Jira (Agile)
+                Microsoft Azure, DynamoDB, AWS, Supabase, Docker, Git (Github - Graphite CI/CD), Figma, PhotoShop, Mural, Fullstory, Asana and Jira (Agile)
               </p>
             </Card>
             <Card borderColor="teal" boxShadow="pink">
