@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { DownloadIcon, ChatsCircleIcon, CodeIcon, CloudCheckIcon, FinnTheHumanIcon } from "@phosphor-icons/react";
 import groark from '../assets/groark.jpeg';
-import groarkResume from '../assets/colingroark-resume.pdf';
+import groarkResume from '../assets/colingroark-resume-2026.pdf';
 
 const AboutContainer = styled.div`
   max-width: 960px;
@@ -99,7 +99,7 @@ function About() {
                 <h2 style={{ margin: '0 0 10px 0' }}>
                   Colin Groark
                 </h2>
-                <p style={{ margin: '0' }}>Full stack software engineer with a frontend focus and leadership experience who contributes across the stack to build scalable, responsive, accessible, and high-quality UI, data visualizations, and software platforms in close collaboration with product and design teams.</p>
+                <p style={{ margin: '0' }}>Full stack software engineer with leadership experience contributing across the stack to design, build and ship scalable, responsive, accessible, and high-quality UI, data visualizations, and software platforms in close collaboration with product and design teams.</p>
               </ProfileText>
             </Card>
           </ProfileContainer>
@@ -113,7 +113,7 @@ function About() {
                 React, Angular, TypeScript, JavaScript, ES6, JSX, RxJS, JQuery, CSS, SCSS, styled-components, HTML, Data Visualization (Chart.js, Recharts, amCharts), Ionic/Capacitor
               </p>
               <p>
-                Bootstrap, Material UI, WordPress CMS, Jasmine and Karma (Angular testing framework)
+                Tailwind CSS, Vite, Bootstrap, Material UI, WordPress CMS, Jasmine and Karma (Angular testing framework)
               </p>
               <p>
                 Node.js, SQL, PostgreSQL, Python, GraphQL
@@ -125,7 +125,7 @@ function About() {
                 <CloudCheckIcon size={32} />
               </h3>
               <p>
-                Microsoft Azure, Docker, Buildbot, Git, Figma, PhotoShop, Mural, Google Analytics, Fullstory
+                Microsoft Azure, DynamoDB, AWS, Docker, Buildbot, Git (Github - Graphite CI/CD), Figma, PhotoShop, Mural, Google Analytics, Fullstory, Asana and Jira (Agile)
               </p>
             </Card>
             <Card borderColor="teal" boxShadow="pink">
