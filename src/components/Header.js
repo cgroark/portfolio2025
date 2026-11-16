@@ -12,7 +12,7 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 20px 8px;
 
   h1 {
     font-family: 'Raleway', sans-serif;
@@ -43,6 +43,11 @@ const NavLink = styled(Link)`
   &:hover {
     background-color: ${props => props.theme.purple};
     border: solid 2px ${props => props.theme.offWhite};
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${props => props.theme.yellow};
+    outline-offset: 2px;
   }
 `;
 

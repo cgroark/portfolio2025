@@ -5,11 +5,15 @@ import styled from "styled-components";
 const NavList = styled.ul`
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 12px 0;
 `;
 
 const NavItem = styled.li`
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
 `;
 
 const NavLink = styled(Link)`
@@ -22,11 +26,16 @@ const NavLink = styled(Link)`
   border: solid 2px transparent;
   padding: 10px 14px;
   border-radius: 10px;
-  transition: background-color 0.3s ease, border 0.5s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
     background-color: ${props => props.theme.purple};
-    border: solid 2px ${props => props.theme.offWhite};
+    border-color: ${props => props.theme.offWhite};
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${props => props.theme.yellow};
+    outline-offset: 2px;
   }
 `;
 

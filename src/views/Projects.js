@@ -172,7 +172,7 @@ function Projects() {
               <a style={{ color: 'inherit' }} href="https://github.com/cgroark/missed-movies" target="_blank" rel="noopener noreferrer">
                 <GithubLogoIcon size={32} />
               </a>
-              Missed Movies React App
+              Missed It
             </div>
           </h2>
 
@@ -212,7 +212,7 @@ function Projects() {
               borderColor="teal"
               boxShadow="pink"
               src={missedMovies}
-              alt="Missed Movies"
+              alt="Missed It"
               onLoad={() => setLoaded(true)}
             />
           </ImageWrapper>
@@ -224,7 +224,7 @@ function Projects() {
           <ImageWrapper $loaded={loaded}>
             <ProjectImage
               loading="lazy"
-              src={bookends} alt="Book Ends"
+              src={bookends} alt="Bookends"
               borderColor="pink"
               boxShadow="teal"
               onLoad={() => setLoaded(true)}
@@ -237,7 +237,7 @@ function Projects() {
               <a style={{ color: 'inherit' }} href="https://github.com/cgroark/supa-bookends" target="_blank" rel="noopener noreferrer">
                 <GithubLogoIcon size={32} />
               </a>
-              Book Ends
+              Bookends
             </div>
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
