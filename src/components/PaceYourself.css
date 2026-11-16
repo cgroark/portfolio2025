@@ -1,0 +1,372 @@
+.pace-app {
+  --ink: #f5f1fa;
+  --muted: #b5adbf;
+  --green: #15aa93;
+  --mint: #173e3a;
+  --coral: #f38ba2;
+  --paper: #282c34;
+  --panel: #343943;
+  --line: #474b55;
+
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+  color: var(--ink);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.pace-app button,
+.pace-app input,
+.pace-app select {
+  font: inherit;
+}
+
+.pace-app .calculator-card {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  min-height: 100%;
+  margin: 0;
+  padding: 28px 24px 20px;
+  background: var(--panel);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.pace-app .card-heading {
+  text-align: center;
+}
+
+.pace-app .card-heading h2 {
+  margin: 8px 0 5px;
+  color: var(--ink);
+  font: 800 26px 'Manrope', sans-serif;
+  letter-spacing: -.04em;
+}
+
+.pace-app .card-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.pace-app .eyebrow {
+  display: block;
+  color: #b29bd2;
+  font: 700 10px 'DM Sans', sans-serif;
+  letter-spacing: .17em;
+}
+
+.pace-app .mode-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 23px 0 22px;
+  padding: 5px;
+  background: #292d35;
+  border-radius: 10px;
+}
+
+.pace-app .mode-button {
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px;
+  color: #b7b1c0;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+}
+
+.pace-app .mode-button.active {
+  color: var(--ink);
+  background: #41434d;
+  border-color: #62616e;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .13);
+}
+
+.pace-app .mode-button:focus-visible,
+.pace-app .calculate-button:focus-visible,
+.pace-app input:focus-visible,
+.pace-app select:focus-visible {
+  outline: 2px solid #b29bd2;
+  outline-offset: 2px;
+}
+
+.pace-app .mode-icon {
+  width: 30px;
+  height: 30px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  color: #d0b9ee;
+  background: #514366;
+  border-radius: 8px;
+  font-size: 19px;
+}
+
+.pace-app .mode-button strong,
+.pace-app .mode-button small {
+  display: block;
+}
+
+.pace-app .mode-button strong {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pace-app .mode-button small {
+  margin-top: 4px;
+  color: #aaa4b2;
+  font-size: 9px;
+}
+
+.pace-app .form-field {
+  margin-top: 17px;
+}
+
+.pace-app .form-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e4dfea;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.pace-app .form-field select,
+.pace-app .input-with-unit input,
+.pace-app .time-part input {
+  height: 44px;
+  color: #f7f3fa;
+  background: #41444c;
+  border: 1px solid #5a5c65;
+  border-radius: 7px;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.pace-app .form-field select:focus,
+.pace-app .input-with-unit input:focus,
+.pace-app .time-part input:focus {
+  border-color: #a98acb;
+  box-shadow: 0 0 0 3px rgba(169, 138, 203, .15);
+}
+
+.pace-app .form-field > select {
+  width: 100%;
+  padding: 0 12px;
+}
+
+.pace-app .form-field select option {
+  color: #f7f3fa;
+  background: #41444c;
+}
+
+.pace-app .input-with-unit {
+  display: flex;
+  gap: 8px;
+}
+
+.pace-app .input-with-unit input {
+  width: 100%;
+  min-width: 0;
+  padding: 0 12px;
+}
+
+.pace-app .input-with-unit select {
+  width: 135px;
+  flex: none;
+  padding: 0 9px;
+}
+
+.pace-app .time-fields {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pace-app .time-part {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pace-app .time-part input {
+  width: 58px;
+  padding: 0 6px;
+  text-align: center;
+  font: 700 15px 'Manrope', sans-serif;
+}
+
+.pace-app .time-part input::-webkit-inner-spin-button,
+.pace-app .time-part input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pace-app .time-part input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.pace-app .time-part span {
+  color: #b5adbf;
+  font-size: 9px;
+}
+
+.pace-app .pace-unit {
+  min-width: 82px;
+  padding: 0 7px;
+}
+
+.pace-app .calculate-button {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 22px;
+  color: white;
+  background: #15aa93;
+  border: 0;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .18s ease, transform .18s ease;
+}
+
+.pace-app .calculate-button:not(:disabled):hover {
+  background: #0e907c;
+  transform: translateY(-1px);
+}
+
+.pace-app .calculate-button:disabled {
+  color: #a9b2b0;
+  background: #416b65;
+  cursor: not-allowed;
+}
+
+.pace-app .result-panel {
+  margin-top: 20px;
+  padding: 18px;
+  text-align: center;
+  background: #303f41;
+  border: 1px solid #466361;
+  border-radius: 9px;
+}
+
+.pace-app .result-panel p {
+  margin: 8px 0 13px;
+  color: #c1c6c2;
+  font-size: 12px;
+}
+
+.pace-app .pace-results {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+}
+
+.pace-app .pace-results div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pace-app .pace-results strong,
+.pace-app .finish-result {
+  color: var(--coral);
+  font: 800 32px 'Manrope', sans-serif;
+  letter-spacing: -.04em;
+}
+
+.pace-app .pace-results span {
+  color: #c1c6c2;
+  font-size: 10px;
+}
+
+.pace-app .finish-result {
+  display: block;
+}
+
+.pace-app .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 18px;
+  color: #aaa6b1;
+  font-size: 9px;
+  letter-spacing: .04em;
+}
+
+.pace-app .footer-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--coral);
+  border-radius: 50%;
+}
+
+@media (max-width: 400px) {
+  .pace-app .calculator-card {
+    padding: 24px 17px 18px;
+  }
+
+  .pace-app .mode-button {
+    gap: 6px;
+    padding: 7px;
+  }
+
+  .pace-app .mode-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .pace-app .mode-button strong {
+    font-size: 10px;
+  }
+
+  .pace-app .mode-button small {
+    font-size: 8px;
+  }
+
+  .pace-app .time-fields {
+    gap: 6px;
+  }
+
+  .pace-app .time-part {
+    gap: 3px;
+  }
+
+  .pace-app .time-part input {
+    width: 50px;
+  }
+
+  .pace-app .time-part span {
+    font-size: 8px;
+  }
+
+  .pace-app .pace-unit {
+    min-width: 75px;
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pace-app *,
+  .pace-app *::before,
+  .pace-app *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}

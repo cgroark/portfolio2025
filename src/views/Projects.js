@@ -13,8 +13,7 @@ import bookends from '../assets/bookEnds.png';
 import missedMovies from '../assets/missedMovies.png';
 import participate from '../assets/po-site.png';
 import ctDashboard from '../assets/CTdashboard.png';
-import PaceHeader from '../components/PaceHeader';
-
+import PaceYourself from '../components/PaceYourself';
 
 const ProjectsContainer = styled.div`
   max-width: 960px;
@@ -65,6 +64,15 @@ const Card = styled.div`
     max-height: 32px;
     flex-shrink: 0;
     flex-grow: 0;
+  }
+`;
+
+const PaceProjectCard = styled(Card)`
+  box-sizing: border-box;
+  width: calc(60% - 10px);
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -127,8 +135,9 @@ const PaceSection = styled.div`
   border-radius: 20px;
   border: solid 3px ${props => props.theme.offWhite};
   box-shadow: 6px 6px ${props => props.theme[props.boxShadow] || props.theme.lightBlack};
-  width: calc(30% - 10px);
-  padding: 20px 10px;
+  width: calc(40% - 10px);
+  padding: 0;
+  overflow: hidden;
   transition: box-shadow 200ms ease, transform 200ms ease;
 
   @media (max-width: 768px) {
@@ -324,9 +333,9 @@ function Projects() {
       <LineBreak />
       <ProjectWrapper style={{ flexWrap: 'wrap-reverse' }}>
         <PaceSection boxShadow="teal">
-          <PaceHeader />
+          <PaceYourself />
         </PaceSection>
-        <Card>
+        <PaceProjectCard>
           <h2 style={{ marginTop: '10px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <a style={{ color: 'inherit' }} href="https://github.com/cgroark/pace-yourself" target="_blank" rel="noopener noreferrer">
@@ -375,7 +384,7 @@ function Projects() {
                 <ArrowBendRightDownIcon size={32} />
               </div>
             </ArrowDown>
-        </Card>
+        </PaceProjectCard>
       </ProjectWrapper>
       <LineBreak />
       <ProjectWrapper>
