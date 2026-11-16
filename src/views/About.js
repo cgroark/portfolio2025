@@ -6,7 +6,8 @@ import groarkResume from '../assets/colingroark-resume-2026.pdf';
 const AboutContainer = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  padding: 20px 20px 50px 20px;
+  width: 100%;
+  padding: 28px 20px 50px;
 `;
 
 const ProfileContainer = styled.div`
@@ -34,7 +35,7 @@ const HeadShot = styled.img`
   border: 3px solid ${props => props.theme.offWhite};
   margin-right: -60px;
   z-index: 1;
-  transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
 
   @media (max-width: 768px) {
     width: 110px;
@@ -47,21 +48,26 @@ const HeadShot = styled.img`
 const Card = styled.div.withConfig({
   shouldForwardProp: (prop) => prop !== 'marginTop' && prop !== 'borderColor'
 })`
+  box-sizing: content-box;
   background-color: ${props => props.theme.offWhite};
   color: ${props => props.theme.lightBlack};
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: solid 3px;
   border-color: ${props => props.theme[props.borderColor] || props.theme.lightBlack};
-  box-shadow: 6px 6px ${props => props.theme[props.boxShadow] || props.theme.lightBlack};
+  box-shadow: 5px 5px ${props => props.theme[props.boxShadow] || props.theme.lightBlack};
   height: fit-content;
   width: calc(50% - 60px);
   margin-top: ${props => props.marginTop || '0'};
-  transition: all 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: box-shadow 200ms ease, transform 200ms ease;
 
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 18px;
   }
 `;
 
@@ -72,17 +78,23 @@ const DownloadLink = styled.a`
   gap: 10px;
   margin: 20px auto 0 auto;
   width: fit-content;
-  padding: 10px 24px;
+  padding: 12px 24px;
   background: ${({ theme }) => theme.purple};
   color: ${({ theme }) => theme.offWhite};
   font-weight: 600;
   border-radius: 10px;
   text-decoration: none;
-  transition: background ease-in-out 0.3s;
-  box-shadow: 4px 4px 0 ${({ theme }) => theme.yellow};
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 3px 3px 0 ${({ theme }) => theme.yellow};
 
   &:hover {
     background: ${({ theme }) => theme.darkPurple};
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.lightBlack};
+    outline-offset: 3px;
   }
 `;
 

@@ -6,7 +6,7 @@ const ContactContainer = styled.div`
   width: calc(100% - 40px);
   max-width: 680px;
   margin: 0 auto;
-  padding: 36px 0 50px;
+  padding: 28px 0 50px;
 `;
 
 const Card = styled.div`
@@ -14,9 +14,9 @@ const Card = styled.div`
   color: ${props => props.theme.lightBlack};
   border: solid 3px ${props => props.theme.pink};
   padding: 28px;
-  border-radius: 10px;
+  border-radius: 12px;
   height: fit-content;
-  box-shadow: 6px 6px 0 ${({ theme }) => theme.teal};
+  box-shadow: 5px 5px 0 ${({ theme }) => theme.teal};
   text-align: center;
 
   @media (max-width: 576px) {
@@ -76,14 +76,14 @@ const DownloadLink = styled.a`
   gap: 10px;
   margin: 20px auto 0 auto;
   width: fit-content;
-  padding: 10px 24px;
+  padding: 12px 24px;
   background: ${({ theme }) => theme.purple};
   color: ${({ theme }) => theme.offWhite};
   font-weight: 600;
   border-radius: 10px;
   text-decoration: none;
   transition: background-color 0.2s ease, transform 0.2s ease;
-  box-shadow: 4px 4px 0 ${({ theme }) => theme.yellow};
+  box-shadow: 3px 3px 0 ${({ theme }) => theme.yellow};
 
   &:hover {
     background: ${({ theme }) => theme.darkPurple};
